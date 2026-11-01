@@ -15,8 +15,22 @@
   --radius: 20px;
 }
 
+/* 화면 모드: 시스템(기본, 기기 설정을 따름)·라이트·다크. 고른 값은 <html data-theme>에 붙는다 */
+:root { color-scheme: light; }
+:root[data-theme="dark"] {
+  --green-dark: #5BD69A;
+  --green-light: #11301F;
+  --green-ink: #C9F0DA;
+  --ink: #EEF1EF;
+  --ink2: #D9DEDB;
+  --paper: #121413;
+  --paper2: #1D201E;
+  --line: #2F3431;
+  --grey: #9AA19D;
+  color-scheme: dark;
+}
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --green-dark: #5BD69A;
     --green-light: #11301F;
     --green-ink: #C9F0DA;
@@ -26,6 +40,7 @@
     --paper2: #1D201E;
     --line: #2F3431;
     --grey: #9AA19D;
+    color-scheme: dark;
   }
 }
 
@@ -68,6 +83,21 @@ p { margin: 0; }
 .nav-links { display: flex; gap: 28px; }
 .nav-links a { text-decoration: none; font-weight: 600; font-size: 15px; color: var(--grey); }
 .nav-links a:hover { color: var(--ink); }
+
+/* 화면 모드 선택 */
+.nav-right { display: flex; align-items: center; gap: 28px; }
+.theme-switch {
+  display: inline-flex; padding: 3px; gap: 2px;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--paper2);
+}
+.theme-switch button {
+  min-height: 32px; padding: 0 12px; border: 0; border-radius: 999px;
+  background: transparent; color: var(--grey);
+  font: inherit; font-size: 13px; font-weight: 700; cursor: pointer;
+}
+.theme-switch button:hover { color: var(--ink); }
+.theme-switch button[aria-pressed="true"] { background: var(--paper); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.theme-switch button:focus-visible { outline: 2px solid var(--green); outline-offset: 1px; }
 
 /* 공통 */
 .eyebrow { color: var(--green-dark); font-weight: 700; font-size: 15px; margin-bottom: 12px; }
@@ -155,6 +185,8 @@ p { margin: 0; }
 }
 .feature + .feature { border-top: 1px solid var(--line); }
 .feature.reverse .feature-copy { order: 2; }
+.feature-text { grid-template-columns: 1fr; }
+.feature-text .feature-copy > p { max-width: 40em; }
 .feature-copy h3 { font-size: clamp(24px, 3vw, 32px); margin-bottom: 16px; }
 .feature-copy > p { color: var(--grey); font-size: 17px; max-width: 32em; }
 .checks { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 10px; }
@@ -213,6 +245,7 @@ p { margin: 0; }
 @media (max-width: 640px) {
   .wrap { padding: 0 16px; }
   .nav-links { display: none; }
+  .theme-switch button { padding: 0 10px; }
   .hero { padding: 56px 0 72px; }
   .phone { width: 260px; border-radius: 38px; padding: 10px; }
   .phone img { border-radius: 29px; }

@@ -5,12 +5,16 @@ NAWA 회사·서비스 소개 페이지. GitHub Pages로 배포한다.
 - 주소: https://kyungdh93.github.io/nawa-pages/
 - 빌드 도구 없음. `index.html`과 `assets/`만 수정하면 된다.
 
+## 내용 기준
+
+소개 문구는 앱 저장소의 정책서(`nawa/policy/`, 현재 기준 버전)와 맞춘다. 정책서가 바뀌면 기능·약속·로드맵 문구를 함께 확인한다.
+
 ## 구조
 
 | 경로 | 내용 |
 | --- | --- |
 | `index.html` | 페이지 전체 |
-| `assets/style.css` | 스타일. 색은 앱 디자인 토큰(`nawa/mobile/src/theme/tokens.ts`)과 같다 |
+| `assets/style.css` | 스타일. 색은 앱 디자인 토큰(`nawa/mobile/src/theme/tokens.ts`)과 같다. 화면 모드는 앱과 같이 시스템·라이트·다크 (고른 값은 `localStorage`의 `nawa-theme`, `<html data-theme>`) |
 | `assets/img/` | 앱 화면 캡처(`nawa/prototype/screenshots`)와 파비콘 |
 | `.nojekyll` | Jekyll 처리 끄기 |
 
