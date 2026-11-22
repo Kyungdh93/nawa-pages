@@ -1,6 +1,6 @@
 # NAWA 홈페이지
 
-NAWA 회사·서비스 소개 페이지. GitHub Pages로 배포한다.
+NAWA가 만드는 앱 **라클** 소개 페이지 (2026-11-23 NAWA 앱 → 라클로 문구·화면 교체). GitHub Pages로 배포한다.
 
 - 주소: https://kyungdh93.github.io/nawa-pages/
 - 빌드 도구 없음. `index.html`과 `assets/`만 수정하면 된다.
@@ -15,7 +15,7 @@ NAWA 회사·서비스 소개 페이지. GitHub Pages로 배포한다.
 | --- | --- |
 | `index.html` | 페이지 전체 |
 | `assets/style.css` | 스타일. 색은 앱 디자인 토큰(`nawa/mobile/src/theme/tokens.ts`)과 같다. 화면 모드는 앱과 같이 시스템·라이트·다크 (고른 값은 `localStorage`의 `nawa-theme`, `<html data-theme>`) |
-| `assets/img/` | 앱 화면 캡처(`nawa/prototype/screenshots`)와 파비콘 |
+| `assets/img/` | 앱 화면 캡처(로컬 라클 웹 앱 390×802, 2배 — 홈·전체 기록·성장나무·성장스토리)와 라클 아이콘(`lacle/web/public`) |
 | `.nojekyll` | Jekyll 처리 끄기 |
 
 ## 로컬에서 보기
