@@ -259,9 +259,3 @@ p { margin: 0; }
   html { scroll-behavior: auto; }
   .btn { transition: none; }
 }
-
-/* 사용자 매뉴얼 버튼 (모바일에서도 보이게 메뉴 밖에 둔다) */
-.nav-manual { display: inline-flex; align-items: center; padding: 7px 14px; border: 1px solid var(--green); border-radius: 999px;
-  color: var(--green-dark); font-weight: 700; font-size: 14px; text-decoration: none; white-space: nowrap; }
-.nav-manual:hover { background: var(--green-light); }
-@media (max-width: 640px) { .nav-manual { padding: 6px 10px; font-size: 13px; } }
