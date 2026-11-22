@@ -2,7 +2,7 @@
 
 NAWA가 만드는 앱 **라클** 소개 페이지 (2026-11-23 NAWA 앱 → 라클로 문구·화면 교체). GitHub Pages로 배포한다.
 
-- 주소: https://kyungdh93.github.io/nawa-pages/
+- 주소: https://lacle.nawa.io.kr (가비아 CNAME `lacle` → kyungdh93.github.io). NAWA 대표 페이지 nawa.io.kr 는 `nawa-home` 저장소
 - 빌드 도구 없음. `index.html`과 `assets/`만 수정하면 된다.
 
 ## 내용 기준
